@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsExercicioCronometro", "FormsExercicioCronometro\FormsExercicioCronometro.csproj", "{39FC72F6-83E5-4602-9C5C-AB2D5D6B19F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CronometroConsole", "CronometroConsole\CronometroConsole.csproj", "{45E50ADC-2005-493C-A046-114037C48630}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39FC72F6-83E5-4602-9C5C-AB2D5D6B19F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39FC72F6-83E5-4602-9C5C-AB2D5D6B19F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39FC72F6-83E5-4602-9C5C-AB2D5D6B19F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39FC72F6-83E5-4602-9C5C-AB2D5D6B19F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E50ADC-2005-493C-A046-114037C48630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E50ADC-2005-493C-A046-114037C48630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E50ADC-2005-493C-A046-114037C48630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E50ADC-2005-493C-A046-114037C48630}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DF8B147-1CD3-437F-82BB-98E66D085AF9}
+	EndGlobalSection
+EndGlobal
