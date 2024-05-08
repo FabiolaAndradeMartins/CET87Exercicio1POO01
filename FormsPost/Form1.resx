@@ -117,11 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblDescricao.Text" xml:space="preserve">
-    <value>Fazer tranzição de carreira não é tarefa fácil, mas se você se dedicar, o sucesso será garantido.
+  <data name="lblTexto.Text" xml:space="preserve">
+    <value>Fazer transição de carreira não é tarefa fácil, mas se você se dedicar, o sucesso será garantido.
 Atualmente, muitas pessoas estão passando por esse processo e devido as dificuldades, muitos desistem.
 Temos que entender que nada nessa vida e fácil e que o esforço sempre vale a pena no final.
-Fabíola Martins</value>
+                                                                                                                
+                                                                                                                          Fabíola Martins</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
