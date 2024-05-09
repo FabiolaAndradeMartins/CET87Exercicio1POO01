@@ -10,10 +10,7 @@ namespace FormsPost
             AtualizarTela();
         }
 
-        private void llblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
+     
         private void AtualizarTela()
         {
             var post = blog.Posts[blog.Posicao];

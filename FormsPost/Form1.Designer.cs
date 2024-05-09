@@ -46,12 +46,11 @@
             // 
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Tahoma", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(12, 9);
+            lblTitulo.Location = new Point(12, 38);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(776, 69);
             lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "Transição de Carreira";
-            lblTitulo.Click += llblTitulo_Click;
+            lblTitulo.Text = "Blog EducAção";
             // 
             // lblTexto
             // 
@@ -113,22 +112,26 @@
             // 
             // btnAnterior
             // 
-            btnAnterior.Location = new Point(567, 24);
+            btnAnterior.BackColor = Color.MistyRose;
+            btnAnterior.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAnterior.Location = new Point(557, 38);
             btnAnterior.Name = "btnAnterior";
-            btnAnterior.Size = new Size(75, 23);
+            btnAnterior.Size = new Size(85, 33);
             btnAnterior.TabIndex = 6;
             btnAnterior.Text = "Anterior";
-            btnAnterior.UseVisualStyleBackColor = true;
+            btnAnterior.UseVisualStyleBackColor = false;
             btnAnterior.Click += btnAnterior_Click;
             // 
             // btnProximo
             // 
-            btnProximo.Location = new Point(661, 24);
+            btnProximo.BackColor = Color.MistyRose;
+            btnProximo.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnProximo.Location = new Point(668, 38);
             btnProximo.Name = "btnProximo";
-            btnProximo.Size = new Size(75, 23);
+            btnProximo.Size = new Size(70, 33);
             btnProximo.TabIndex = 7;
             btnProximo.Text = "Próximo";
-            btnProximo.UseVisualStyleBackColor = true;
+            btnProximo.UseVisualStyleBackColor = false;
             btnProximo.Click += btnProximo_Click;
             // 
             // lblData
@@ -144,6 +147,7 @@
             // lblLike
             // 
             lblLike.AutoSize = true;
+            lblLike.BackColor = Color.Transparent;
             lblLike.Location = new Point(680, 400);
             lblLike.Name = "lblLike";
             lblLike.Size = new Size(38, 15);
@@ -153,6 +157,7 @@
             // lblDislike
             // 
             lblDislike.AutoSize = true;
+            lblDislike.BackColor = Color.Transparent;
             lblDislike.Location = new Point(393, 400);
             lblDislike.Name = "lblDislike";
             lblDislike.Size = new Size(38, 15);
