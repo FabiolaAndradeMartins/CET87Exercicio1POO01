@@ -118,9 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblTexto.Text" xml:space="preserve">
-    <value>Fazer transição de carreira não é tarefa fácil, mas se você se dedicar, o sucesso será garantido.
-Atualmente, muitas pessoas estão passando por esse processo e devido as dificuldades, muitos desistem.
-Temos que entender que nada nessa vida e fácil e que o esforço sempre vale a pena no final.
+    <value>Espaço onde aparecerão as postagens.
                                                                                                                 
                                                                                                                           Fabíola Martins</value>
   </data>

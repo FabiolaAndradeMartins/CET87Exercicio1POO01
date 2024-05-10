@@ -56,19 +56,18 @@
             // 
             lblTexto.BackColor = Color.Transparent;
             lblTexto.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTexto.Location = new Point(22, 172);
+            lblTexto.Location = new Point(38, 211);
             lblTexto.Name = "lblTexto";
             lblTexto.Size = new Size(754, 154);
             lblTexto.TabIndex = 1;
             lblTexto.Text = resources.GetString("lblTexto.Text");
-           
             // 
             // lbl
             // 
             lbl.AutoSize = true;
             lbl.BackColor = Color.Transparent;
             lbl.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl.Location = new Point(12, 338);
+            lbl.Location = new Point(12, 365);
             lbl.Name = "lbl";
             lbl.Size = new Size(107, 18);
             lbl.TabIndex = 2;
@@ -105,7 +104,7 @@
             lblTituloPost.AutoSize = true;
             lblTituloPost.BackColor = Color.Transparent;
             lblTituloPost.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTituloPost.Location = new Point(47, 125);
+            lblTituloPost.Location = new Point(38, 180);
             lblTituloPost.Name = "lblTituloPost";
             lblTituloPost.Size = new Size(55, 21);
             lblTituloPost.TabIndex = 5;
@@ -115,7 +114,7 @@
             // 
             btnAnterior.BackColor = Color.MistyRose;
             btnAnterior.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAnterior.Location = new Point(557, 38);
+            btnAnterior.Location = new Point(547, 50);
             btnAnterior.Name = "btnAnterior";
             btnAnterior.Size = new Size(85, 33);
             btnAnterior.TabIndex = 6;
@@ -127,7 +126,7 @@
             // 
             btnProximo.BackColor = Color.MistyRose;
             btnProximo.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnProximo.Location = new Point(668, 38);
+            btnProximo.Location = new Point(666, 50);
             btnProximo.Name = "btnProximo";
             btnProximo.Size = new Size(70, 33);
             btnProximo.TabIndex = 7;
@@ -139,7 +138,7 @@
             // 
             lblData.AutoSize = true;
             lblData.BackColor = Color.Transparent;
-            lblData.Location = new Point(140, 340);
+            lblData.Location = new Point(140, 368);
             lblData.Name = "lblData";
             lblData.Size = new Size(38, 15);
             lblData.TabIndex = 8;
