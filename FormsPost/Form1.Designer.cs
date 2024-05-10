@@ -61,6 +61,7 @@
             lblTexto.Size = new Size(754, 154);
             lblTexto.TabIndex = 1;
             lblTexto.Text = resources.GetString("lblTexto.Text");
+           
             // 
             // lbl
             // 

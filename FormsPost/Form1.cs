@@ -10,7 +10,7 @@ namespace FormsPost
             AtualizarTela();
         }
 
-     
+
         private void AtualizarTela()
         {
             var post = blog.Posts[blog.Posicao];
@@ -74,5 +74,7 @@ namespace FormsPost
             post.Dislike();
             AtualizarTela();
         }
+
+        
     }
 }
