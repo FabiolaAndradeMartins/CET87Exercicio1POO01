@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            txtCor = new TextBox();
             label1 = new Label();
             txtDirecao = new TextBox();
             label2 = new Label();
@@ -41,23 +40,22 @@
             btnDescer = new Button();
             numX = new NumericUpDown();
             numY = new NumericUpDown();
-            colorDialog1 = new ColorDialog();
+            colorDialog = new ColorDialog();
+            pictureBox3 = new PictureBox();
+            lblCorSelecionada = new Label();
+            pictureBox10 = new PictureBox();
+            picBalao = new PictureBox();
+            button1 = new Button();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)numX).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numY).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picBalao).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
-            // 
-            // txtCor
-            // 
-            txtCor.Location = new Point(32, 50);
-            txtCor.Name = "txtCor";
-            txtCor.Size = new Size(100, 23);
-            txtCor.TabIndex = 0;
             // 
             // label1
             // 
@@ -112,7 +110,8 @@
             // 
             // btnCor
             // 
-            btnCor.Location = new Point(138, 49);
+            btnCor.Enabled = false;
+            btnCor.Location = new Point(67, 30);
             btnCor.Name = "btnCor";
             btnCor.Size = new Size(75, 23);
             btnCor.TabIndex = 4;
@@ -122,6 +121,7 @@
             // 
             // btnDirecao
             // 
+            btnDirecao.Enabled = false;
             btnDirecao.Location = new Point(138, 108);
             btnDirecao.Name = "btnDirecao";
             btnDirecao.Size = new Size(75, 23);
@@ -132,6 +132,7 @@
             // 
             // btnSubir
             // 
+            btnSubir.Enabled = false;
             btnSubir.Location = new Point(174, 153);
             btnSubir.Name = "btnSubir";
             btnSubir.Size = new Size(75, 23);
@@ -142,6 +143,7 @@
             // 
             // btnDescer
             // 
+            btnDescer.Enabled = false;
             btnDescer.Location = new Point(174, 182);
             btnDescer.Name = "btnDescer";
             btnDescer.Size = new Size(75, 23);
@@ -153,6 +155,7 @@
             // numX
             // 
             numX.Location = new Point(117, 155);
+            numX.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numX.Name = "numX";
             numX.Size = new Size(51, 23);
             numX.TabIndex = 8;
@@ -160,52 +163,97 @@
             // numY
             // 
             numY.Location = new Point(117, 182);
+            numY.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numY.Name = "numY";
             numY.Size = new Size(51, 23);
             numY.TabIndex = 8;
             // 
-            // pictureBox1
+            // colorDialog
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(275, 23);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(69, 82);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 9;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(375, 118);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(91, 87);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 10;
-            pictureBox2.TabStop = false;
+            colorDialog.Color = Color.Red;
             // 
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(255, 203);
+            pictureBox3.Location = new Point(7, 224);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(100, 87);
+            pictureBox3.Size = new Size(71, 64);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 11;
             pictureBox3.TabStop = false;
+            // 
+            // lblCorSelecionada
+            // 
+            lblCorSelecionada.AutoSize = true;
+            lblCorSelecionada.BackColor = Color.Transparent;
+            lblCorSelecionada.Location = new Point(32, 56);
+            lblCorSelecionada.Name = "lblCorSelecionada";
+            lblCorSelecionada.Size = new Size(38, 15);
+            lblCorSelecionada.TabIndex = 12;
+            lblCorSelecionada.Text = "label4";
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.BackColor = Color.Transparent;
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(96, 241);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(55, 75);
+            pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox10.TabIndex = 9;
+            pictureBox10.TabStop = false;
+            // 
+            // picBalao
+            // 
+            picBalao.BackColor = SystemColors.GradientInactiveCaption;
+            picBalao.Location = new Point(358, 52);
+            picBalao.Name = "picBalao";
+            picBalao.Size = new Size(118, 112);
+            picBalao.TabIndex = 14;
+            picBalao.TabStop = false;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(3, 6);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 15;
+            button1.Text = "Iniciar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.Location = new Point(161, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 79);
+            pictureBox1.TabIndex = 16;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.Location = new Point(207, 23);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(105, 84);
+            pictureBox2.TabIndex = 17;
+            pictureBox2.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(478, 328);
-            Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Controls.Add(picBalao);
+            Controls.Add(button1);
+            Controls.Add(lblCorSelecionada);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox10);
             Controls.Add(numY);
             Controls.Add(numX);
             Controls.Add(btnDescer);
@@ -217,14 +265,16 @@
             Controls.Add(label2);
             Controls.Add(txtDirecao);
             Controls.Add(label1);
-            Controls.Add(txtCor);
             Name = "Form1";
             Text = "Balão";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)numX).EndInit();
             ((System.ComponentModel.ISupportInitialize)numY).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBalao).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -243,9 +293,13 @@
         private Button btnDescer;
         private NumericUpDown numX;
         private NumericUpDown numY;
-        private ColorDialog colorDialog1;
+        private ColorDialog colorDialog;
+        private PictureBox pictureBox3;
+        private Label lblCorSelecionada;
+        private PictureBox pictureBox10;
+        private PictureBox picBalao;
+        private Button button1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
     }
 }
