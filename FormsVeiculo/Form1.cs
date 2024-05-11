@@ -28,13 +28,14 @@ namespace FormsVeiculo
         private void btnAbastecer_Click(object sender, EventArgs e)
         {
             veiculo.Abastecer(numLitros.Value);
-            AtualizaStatus();
-        }
+            decimal valorLitro = decimal.Parse(txtValorLitro.Text);
 
-        private void btnValorMedioPorKm_Click(object sender, EventArgs e)
-        {
-            var valor = veiculo.ValorMedioPorKm(decimal.Parse(txtValorMedioPorKm.Text));
-            lblValorMedioPorKm.Text = $"Valor = {valor:n2}€/Km";
+            var valorTotal = veiculo.CalcularTotalGasto(valorLitro, numLitros.Value);
+            var custoMedioKm = veiculo.ValorMedioPorKm(valorLitro);
+            lblAbastecer.Text = $"Valor total abastecido...:{valorTotal:n2}€\n" +
+                                $"Valor medio/km...........:{custoMedioKm:n2}€";
+
+            AtualizaStatus();
         }
     }
 }

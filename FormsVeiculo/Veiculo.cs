@@ -2,10 +2,12 @@
 {
     public class Veiculo
     {
+        #region Costantes
         // Quantidade de Litros da Reserva do Tanque
         const int Reserva = 10;
         // Consumo médio veículo l/ 100 Km
         const decimal ConsumoMedio = 6.5M;
+        #endregion
 
         #region Propriedades
         public string Matricula { get; set; }
@@ -15,11 +17,7 @@
         public int ContadorViagens { get; set; }
         #endregion
 
-        #region Construtores
-        public Veiculo()
-        {
-
-        }
+        #region Construtores        
         public Veiculo(string matricula, int quilometragem, int capacidade, int litrosNoTanque, int contadorViagens)
         {
             Matricula = matricula;
@@ -60,9 +58,9 @@
 
         // Dado um valor médio de custo por litro, calcular o
         // valor total gasto em combustível;
-        public decimal CalcularTotalGasto(decimal valorMedio)
+        public decimal CalcularTotalGasto(decimal custoMedioPorLitro, decimal litros)
         {
-            return Quilometragem * valorMedio;
+            return litros * custoMedioPorLitro;
         }
 
         // Dado um valor médio de custo por litro, calcular o

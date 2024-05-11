@@ -35,9 +35,10 @@
             numQuilometros = new NumericUpDown();
             numLitros = new NumericUpDown();
             btnAbastecer = new Button();
-            txtValorMedioPorKm = new TextBox();
-            btnValorMedioPorKm = new Button();
-            lblValorMedioPorKm = new Label();
+            txtValorLitro = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            lblAbastecer = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numQuilometros).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numLitros).BeginInit();
@@ -66,7 +67,7 @@
             // 
             // btnRegistaViagem
             // 
-            btnRegistaViagem.Location = new Point(424, 32);
+            btnRegistaViagem.Location = new Point(513, 119);
             btnRegistaViagem.Name = "btnRegistaViagem";
             btnRegistaViagem.Size = new Size(154, 23);
             btnRegistaViagem.TabIndex = 3;
@@ -76,7 +77,7 @@
             // 
             // numQuilometros
             // 
-            numQuilometros.Location = new Point(324, 32);
+            numQuilometros.Location = new Point(413, 119);
             numQuilometros.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numQuilometros.Name = "numQuilometros";
             numQuilometros.Size = new Size(94, 23);
@@ -84,7 +85,7 @@
             // 
             // numLitros
             // 
-            numLitros.Location = new Point(324, 71);
+            numLitros.Location = new Point(413, 205);
             numLitros.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numLitros.Name = "numLitros";
             numLitros.Size = new Size(94, 23);
@@ -92,42 +93,57 @@
             // 
             // btnAbastecer
             // 
-            btnAbastecer.Location = new Point(424, 71);
+            btnAbastecer.Location = new Point(513, 187);
             btnAbastecer.Name = "btnAbastecer";
-            btnAbastecer.Size = new Size(154, 23);
+            btnAbastecer.Size = new Size(154, 88);
             btnAbastecer.TabIndex = 6;
             btnAbastecer.Text = "Abastecer Litros";
             btnAbastecer.UseVisualStyleBackColor = true;
             btnAbastecer.Click += btnAbastecer_Click;
             // 
-            // txtValorMedioPorKm
+            // txtValorLitro
             // 
-            txtValorMedioPorKm.Location = new Point(324, 109);
-            txtValorMedioPorKm.Name = "txtValorMedioPorKm";
-            txtValorMedioPorKm.Size = new Size(94, 23);
-            txtValorMedioPorKm.TabIndex = 7;
+            txtValorLitro.Location = new Point(413, 252);
+            txtValorLitro.Name = "txtValorLitro";
+            txtValorLitro.Size = new Size(94, 23);
+            txtValorLitro.TabIndex = 7;
+            txtValorLitro.Text = "1,75";
             // 
-            // btnValorMedioPorKm
+            // label1
             // 
-            btnValorMedioPorKm.Location = new Point(424, 108);
-            btnValorMedioPorKm.Name = "btnValorMedioPorKm";
-            btnValorMedioPorKm.Size = new Size(154, 23);
-            btnValorMedioPorKm.TabIndex = 8;
-            btnValorMedioPorKm.Text = "Calcular ValorMedio/Km";
-            btnValorMedioPorKm.UseVisualStyleBackColor = true;
-            btnValorMedioPorKm.Click += btnValorMedioPorKm_Click;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(413, 187);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 8;
+            label1.Text = "Litros";
             // 
-            // lblValorMedioPorKm
+            // label2
             // 
-            lblValorMedioPorKm.AutoSize = true;
-            lblValorMedioPorKm.BackColor = Color.Transparent;
-            lblValorMedioPorKm.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblValorMedioPorKm.ForeColor = Color.Yellow;
-            lblValorMedioPorKm.Location = new Point(442, 134);
-            lblValorMedioPorKm.Name = "lblValorMedioPorKm";
-            lblValorMedioPorKm.Size = new Size(40, 15);
-            lblValorMedioPorKm.TabIndex = 9;
-            lblValorMedioPorKm.Text = "label1";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(413, 234);
+            label2.Name = "label2";
+            label2.Size = new Size(64, 15);
+            label2.TabIndex = 9;
+            label2.Text = "Valor Litro";
+            // 
+            // lblAbastecer
+            // 
+            lblAbastecer.AutoSize = true;
+            lblAbastecer.BackColor = Color.Transparent;
+            lblAbastecer.Font = new Font("Consolas", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAbastecer.ForeColor = Color.Yellow;
+            lblAbastecer.Location = new Point(424, 288);
+            lblAbastecer.Name = "lblAbastecer";
+            lblAbastecer.Size = new Size(49, 14);
+            lblAbastecer.TabIndex = 10;
+            lblAbastecer.Text = "label3";
             // 
             // Form1
             // 
@@ -135,9 +151,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(669, 390);
-            Controls.Add(lblValorMedioPorKm);
-            Controls.Add(btnValorMedioPorKm);
-            Controls.Add(txtValorMedioPorKm);
+            Controls.Add(lblAbastecer);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(txtValorLitro);
             Controls.Add(btnAbastecer);
             Controls.Add(numLitros);
             Controls.Add(numQuilometros);
@@ -161,8 +178,9 @@
         private NumericUpDown numQuilometros;
         private NumericUpDown numLitros;
         private Button btnAbastecer;
-        private TextBox txtValorMedioPorKm;
-        private Button btnValorMedioPorKm;
-        private Label lblValorMedioPorKm;
+        private TextBox txtValorLitro;
+        private Label label1;
+        private Label label2;
+        private Label lblAbastecer;
     }
 }
