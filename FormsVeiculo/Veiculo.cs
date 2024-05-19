@@ -26,13 +26,14 @@
             LitrosNoTanque = litrosNoTanque;
             ContadorViagens = contadorViagens;
         }
-        #endregion        
+        #endregion
 
+        #region Metodos
         // Determinar quantos quilómetros é possível percorrer com o
         // combustível que está no depósito
         public decimal Autonomia()
         {
-            return (decimal)LitrosNoTanque / ConsumoMedio * 100;
+            return LitrosNoTanque / ConsumoMedio * 100;
         }
 
         // Registar uma viagem de K quilómetros e atualizar os dados do veículo;
@@ -44,25 +45,19 @@
             decimal consumoDeCombustivelPorKm = ConsumoMedio / 100;
 
             // Calcular os litros consumidos
-            decimal litrosConsumidos = consumoDeCombustivelPorKm * (decimal)quilometrosPercorridos;
+            decimal litrosConsumidos = consumoDeCombustivelPorKm * quilometrosPercorridos;
 
             LitrosNoTanque -= (int)litrosConsumidos;
             ContadorViagens++;
         }
 
         // Determinar se o veículo já entrou na reserva;
-        public bool SeEntrouReserva()
-        {
-            return LitrosNoTanque <= Reserva;
-        }
+        public bool SeEntrouReserva() => LitrosNoTanque <= Reserva;        
 
         // Dado um valor médio de custo por litro, calcular o
         // valor total gasto em combustível;
-        public decimal CalcularTotalGasto(decimal custoMedioPorLitro, decimal litros)
-        {
-            return litros * custoMedioPorLitro;
-        }
-
+        public decimal CalcularTotalGasto(decimal custoMedioPorLitro, decimal litros) => litros * custoMedioPorLitro;
+        
         // Dado um valor médio de custo por litro, calcular o
         // custo médio por quilómetro;
         public decimal ValorMedioPorKm(decimal custoMedioPorLitro)
@@ -74,11 +69,16 @@
         // Meter L litros de combustível, ou o máximo possível inferior a L, sem transbordar.
         public void Abastecer(decimal litros)
         {
+            // Usando operadores ternários
             LitrosNoTanque = LitrosNoTanque + litros > CapacidadeTanque
                 ? CapacidadeTanque
                 : LitrosNoTanque + litros;
         }
 
+        #endregion
+
+        // Sobrescrever método ToString retornando as informações do 
+        // objeto do tipo Veiculo
         public override string ToString()
         {
             return $"Matricula carro...........: {Matricula}\n"

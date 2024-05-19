@@ -4,7 +4,6 @@ namespace FormsPost
     {
         #region Propriedade
         public Blog blog { get; set; }
-
         #endregion
 
 
@@ -20,7 +19,9 @@ namespace FormsPost
         #region Métodos
         private void AtualizarTela()
         {
+            // pegando o post da posição atual
             var post = blog.Posts[blog.Posicao];
+
             lblTituloPost.Text = post.Titulo;
             lblTexto.Text = post.Texto;
             lblData.Text = post.DataPublicacao.ToShortDateString();
@@ -70,7 +71,9 @@ namespace FormsPost
 
         private void btnLike_Click(object sender, EventArgs e)
         {
+            // Pega o post referente a posicao atual
             var post = blog.Posts[blog.Posicao];
+            // Incrementa o Gosto no ojeto Post
             post.Like();
             AtualizarTela();
         }

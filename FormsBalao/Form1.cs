@@ -1,7 +1,3 @@
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.Windows.Forms;
-
 namespace FormsBalao
 {
     public partial class Form1 : Form
@@ -18,6 +14,15 @@ namespace FormsBalao
         #endregion
 
         #region Métodos
+        // Ao carregar o formulário
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            InicializaBalao();
+            AtualizaDados();
+            PosicionaBalao();
+            MudarCorPictureBox(picBalao);            
+        }
+
         public void InicializaBalao()
         {
             _balao = new Balao("Red", "Norte", 1000);
@@ -38,7 +43,7 @@ namespace FormsBalao
         private void MudarCorPictureBox(PictureBox pictureBox)
         {
             // Muda a cor do Objeto
-            _balao.MudaCor(colorDialog.Color.ToString());
+            _balao.MudaCor(colorDialog.Color.Name);
 
             // Muda a cor do Label
             lblCorSelecionada.Text = _balao.Cor;
@@ -65,7 +70,6 @@ namespace FormsBalao
             {
                 // Desenhar a elipse (corpo do balão)
                 g.FillEllipse(brush, x, y, width, height);
-
             }
 
             // Liberar o objeto Graphics
@@ -107,15 +111,7 @@ namespace FormsBalao
         }
 
      
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-            InicializaBalao();
-            AtualizaDados();
-            PosicionaBalao();
-            MudarCorPictureBox(picBalao);
-            MudarCorPictureBox(picBalao);
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
