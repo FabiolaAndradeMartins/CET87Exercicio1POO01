@@ -6,7 +6,10 @@ namespace FormsBalao
 {
     public partial class Form1 : Form
     {
+        #region Propriedade
         private Balao _balao;
+        #endregion
+
         #region Método Construtor
         public Form1()
         {

@@ -2,15 +2,22 @@ namespace FormsPost
 {
     public partial class Form1 : Form
     {
+        #region Propriedade
         public Blog blog { get; set; }
+
+        #endregion
+
+
+        #region Construtor
         public Form1()
         {
             InitializeComponent();
             InicializaBlog();
             AtualizarTela();
         }
+        #endregion
 
-
+        #region Métodos
         private void AtualizarTela()
         {
             var post = blog.Posts[blog.Posicao];
@@ -75,6 +82,6 @@ namespace FormsPost
             AtualizarTela();
         }
 
-        
+        #endregion
     }
 }

@@ -8,10 +8,14 @@ namespace FormsPost
 {
     public class Blog
     {
+        #region Propriedades
         public List<Post> Posts { get; set; } = new List<Post>();
 
         public  int Posicao { get; set; } = 0;
 
+        #endregion
+
+        #region Métodos
         public void Proximo()
         {
             var qtd = Posts.Count;
@@ -36,5 +40,6 @@ namespace FormsPost
                 Posicao = qtd - 1;
             }
         }
+        #endregion
     }
 }
