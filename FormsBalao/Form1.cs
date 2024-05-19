@@ -6,69 +6,40 @@ namespace FormsBalao
 {
     public partial class Form1 : Form
     {
-        public Balao balao { get; set; }
-
+        private Balao _balao;
+        #region Método Construtor
         public Form1()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region Métodos
         public void InicializaBalao()
         {
-            balao = new Balao("Red", "Norte", 1000);
+            _balao = new Balao("Red", "Norte", 1000);
         }
 
         public void AtualizaDados()
         {
 
-            txtDirecao.Text = balao.Direcao;
-            lblAlturaAtual.Text = balao.Altura.ToString();
-        }
-
-        private void btnCor_Click(object sender, EventArgs e)
-        {
-            if (colorDialog.ShowDialog() == DialogResult.OK)
-            {
-                // Muda a cor da PictureBox
-                MudarCorPictureBox(picBalao);
-            }
-        }
-
-        private void btnDirecao_Click(object sender, EventArgs e)
-        {
-            balao.MudaDirecao(txtDirecao.Text);
-
-        }
-
-        private void btnSubir_Click(object sender, EventArgs e)
-        {
-            balao.Subir((int)numX.Value);
-            AtualizaDados();
-            PosicionaBalao();
-            MudarCorPictureBox(picBalao);
+            txtDirecao.Text = _balao.Direcao;
+            lblAlturaAtual.Text = _balao.Altura.ToString();
         }
 
         private void PosicionaBalao()
         {
-            picBalao.Top = balao.PosicaoForm / 100 + 200;
+            picBalao.Top = _balao.PosicaoForm / 100 + 200;
             DesenharBalao(picBalao, colorDialog.Color);
         }
-
-        private void btnDescer_Click(object sender, EventArgs e)
-        {
-            balao.Descer((int)numY.Value);
-            AtualizaDados();
-            PosicionaBalao();
-        }
-
         private void MudarCorPictureBox(PictureBox pictureBox)
         {
             // Muda a cor do Objeto
-            balao.MudaCor(colorDialog.Color.ToString());
+            _balao.MudaCor(colorDialog.Color.ToString());
 
             // Muda a cor do Label
-            lblCorSelecionada.Text = balao.Cor;
-            
+            lblCorSelecionada.Text = _balao.Cor;
+
             DesenharBalao(pictureBox, colorDialog.Color);
         }
 
@@ -91,13 +62,48 @@ namespace FormsBalao
             {
                 // Desenhar a elipse (corpo do balão)
                 g.FillEllipse(brush, x, y, width, height);
-                
+
             }
 
             // Liberar o objeto Graphics
             g.Dispose();
         }
 
+        #endregion
+
+
+        private void btnCor_Click(object sender, EventArgs e)
+        {
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Muda a cor da PictureBox
+                MudarCorPictureBox(picBalao);
+            }
+        }
+
+        private void btnDirecao_Click(object sender, EventArgs e)
+        {
+            _balao.MudaDirecao(txtDirecao.Text);
+
+        }
+
+        private void btnSubir_Click(object sender, EventArgs e)
+        {
+            _balao.Subir((int)numX.Value);
+            AtualizaDados();
+            PosicionaBalao();
+            MudarCorPictureBox(picBalao);
+        }
+
+
+        private void btnDescer_Click(object sender, EventArgs e)
+        {
+            _balao.Descer((int)numY.Value);
+            AtualizaDados();
+            PosicionaBalao();
+        }
+
+     
         private void Form1_Load(object sender, EventArgs e)
         {
            

@@ -44,7 +44,7 @@ namespace FormsPost
             {
                 Id = 3,
                 Titulo = "Ensino Híbrido - Blended Learning",
-                Texto = @"O Ensino Híbrido também conhecido como blended learning, significa algo misturado, combinado, ou seja, é uma modalidade de educação que chegou junto com a era digital e que envolve os modos de ensino online – onde o aluno geralmente busca o conhecimento sozinho através da internet, e offline – no qual este estuda em grupo, com a mediação do professor. ",
+                Texto = @"O Ensino Híbrido também conhecido como blended learning, significa algo misturado, combinado, ou seja, é uma modalidade deeducação que chegou junto com a era digital e que envolve os modos de ensino online – onde o aluno geralmente busca o conhecimento sozinho através da internet, e offline – no qual este estuda em grupo, com a mediação do professor. ",
                 DataPublicacao = new DateTime(2020, 05, 28)
             });
         }
